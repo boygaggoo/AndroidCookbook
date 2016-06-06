@@ -8,4 +8,5 @@
 /captures
 gradle.properties
 gradle-wrapper.properties
+.idea
 
