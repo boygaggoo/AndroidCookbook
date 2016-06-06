@@ -10,10 +10,39 @@
     <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_huge">64dp</dimen>
 
-    <dimen name="image_size_tiny">24dp</dimen>
-    <dimen name="image_size_small">32dp</dimen>
-    <dimen name="image_size_medium">64dp</dimen>
-    <dimen name="image_size_large">128dp</dimen>
-    <dimen name="image_size_huge">256dp</dimen>
+    <dimen name="image_tiny">24dp</dimen>
+    <dimen name="image_small">32dp</dimen>
+    <dimen name="image_medium">64dp</dimen>
+    <dimen name="image_large">128dp</dimen>
+    <dimen name="image_huge">256dp</dimen>
+
+    <dimen name="button_height_normal">36dp</dimen>
+
+    <dimen name="corner_radius_normal">2dp</dimen>
+
+    <!--
+        For Text
+        Use android:textAppearance="@style/TextAppearance.AppCompat."
+        Display 4 Light 112sp
+        Display 3 Regular 56sp
+        Display 2 Regular 45sp
+        Display 1 Regular 34sp
+        Headline Regular 24sp
+        Title Medium 20sp
+        Subheading Regular 16sp
+        Body 2 Medium 14sp
+        Body 1 Regular 14sp
+        Caption Regular 12sp
+        Button MEDIUM (ALL Caps 14sp)
+    -->
+
+    <!--
+        Color is from colorAccent, but if you want to overwrite use
+        <item name="android:colorButtonNormal">#2196f3</item>
+        style="@style/Widget.AppCompat.Button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    -->
 
 </resources>
