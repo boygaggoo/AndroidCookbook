@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 
@@ -23,6 +24,10 @@ public class BitmapUtil {
     // convert from byte array to bitmap
     public static Bitmap getBitmap(byte[] image) {
         return BitmapFactory.decodeByteArray(image, 0, image.length);
+    }
+
+    public static Bitmap getBitmapFromImageView(ImageView imageView){
+        return ((BitmapDrawable) imageView.getDrawable()).getBitmap();
     }
 
     public static Bitmap drawableToBitmap(Drawable drawable) {
