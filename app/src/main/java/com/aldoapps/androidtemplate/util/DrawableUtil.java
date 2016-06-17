@@ -1,6 +1,7 @@
 package com.aldoapps.androidtemplate.util;
 
 import android.content.res.Resources;
+import android.graphics.Bitmap;
 import android.util.DisplayMetrics;
 
 /**
@@ -31,4 +32,10 @@ public class DrawableUtil {
         return dp;
     }
 
+    public static Bitmap getBlurredBitmap(Bitmap bitmap){
+        float BLUR_SCALE = 2f;
+        int BLUR_RADIUS = 8;
+
+        return StackBlur.fastblur(bitmap, BLUR_SCALE, BLUR_RADIUS);
+    }
 }
