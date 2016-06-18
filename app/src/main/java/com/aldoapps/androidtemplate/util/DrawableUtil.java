@@ -32,10 +32,27 @@ public class DrawableUtil {
         return dp;
     }
 
+    /**
+     * Please be careful when using this method,
+     * Bitmap is wild beast, it consumes a lot of memories,
+     * you either you use different thread or making sure your bitmap is small
+     * enough for UI Thread.
+     * Another options to reduce processing time is to modify blur scale and blur radius.
+     * Tune those two parameters to get desireable result.
+     * @param bitmap
+     * @return
+     */
     public static Bitmap getBlurredBitmap(Bitmap bitmap){
         float BLUR_SCALE = 2f;
         int BLUR_RADIUS = 8;
 
-        return StackBlur.fastblur(bitmap, BLUR_SCALE, BLUR_RADIUS);
+        Bitmap blurBitmap = null;
+        try{
+            blurBitmap = StackBlur.fastblur(bitmap, BLUR_SCALE, BLUR_RADIUS);
+        }catch (OutOfMemoryError e){
+            e.printStackTrace();
+        }
+
+        return blurBitmap;
     }
 }
