@@ -23,7 +23,8 @@ public class StorageUtil {
     private static final int COMPRESSION_RATE = 90;
 
     /**
-     * This will save image to storage, but the image wouldn't be shown in device gallery
+     * This will save image to storage, but the image wouldn't be shown in device gallery.
+     * Maybe you don't want user to access the image in gallery for some reason.
      * @param imageView
      * @param folderName
      * @param fileName
